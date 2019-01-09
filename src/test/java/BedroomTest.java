@@ -105,4 +105,16 @@ public class BedroomTest {
         assertEquals(0, bedroom.numberOfGuests());
     }
 
+    @Test
+    public void canRemoveGuests(){
+        assertFalse(bedroom.isOccupied());
+        assertEquals(0, bedroom.numberOfGuests());
+        bedroom.bookRoom(guest);
+        assertTrue(bedroom.isOccupied());
+        assertEquals(1, bedroom.numberOfGuests());
+        bedroom.removeAllGuests();
+        assertFalse(bedroom.isOccupied());
+        assertEquals(0, bedroom.numberOfGuests());
+    }
+
 }

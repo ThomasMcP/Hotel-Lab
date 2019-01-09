@@ -69,4 +69,9 @@ public class Bedroom {
         guests.add(guest);
     }
 
+    public void removeAllGuests(){
+        guests.clear();
+        occupied = false;
+    }
+
 }
